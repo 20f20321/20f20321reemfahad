@@ -1,0 +1,37 @@
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class BalanceSheet {
+
+    public static void main(String[] args) {
+
+        List<Integer> assets = new ArrayList<>();
+        List<Integer> liabilities = new ArrayList<>();
+
+        // Sample data
+        assets.add(50000); // Cash
+        assets.add(100000); // Buildings
+
+        liabilities.add(20000); // Accounts payable
+        liabilities.add(30000); // Notes payable
+
+        int totalAssets = 0;
+        for (int asset : assets) {
+            totalAssets += asset;
+        }
+
+        int totalLiabilities = 0;
+        for (int liability : liabilities) {
+            totalLiabilities += liability;
+        }
+
+        int ownersEquity = totalAssets - totalLiabilities;
+
+        if (ownersEquity >= 0) {
+            System.out.println("Balance sheet is balanced.");
+        } else {
+            System.out.println("Balance sheet is not balanced.");
+        }
+    }
+}
