@@ -26,12 +26,4 @@ public class BalanceSheet {
             totalLiabilities += liability;
         }
 
-        int ownersEquity = totalAssets - totalLiabilities;
-
-        if (ownersEquity >= 0) {
-            System.out.println("Balance sheet is balanced.");
-        } else {
-            System.out.println("Balance sheet is not balanced.");
-        }
-    }
-}
+      
